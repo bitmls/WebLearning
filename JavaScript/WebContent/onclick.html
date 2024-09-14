@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script>
+			//事件
+			//单击事件：将一个html元素的单击事件和一个JS函数绑定起来
+			function fun(a){
+				window.alert('我被点击了，' + a);
+			}
+			function showTime(){
+				//document.write(Date());
+				
+				//1、获取对应html的元素，通过id来获取元素
+				var p = document.getElementById("time");
+				//2、设置html元素的属性，innerHTML
+				p.innerHTML = new Date();
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="点击我" onclick="fun(1)">
+		<input type="button" value="显示时间" onclick="showTime()"><br>
+		<p id="time">在这里显示时间</p>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Light</title>
+		<script>
+		function turnOn(){
+			var p = document.getElementById("light");
+			p.src = "on.gif";
+		}
+		function turnOff(){
+			var p = document.getELementById("light");
+			p.src = "off.gif";
+		}
+		</script>
+	</head>
+	<body>
+		<img src="off.gif" width="130" height="216" id="light"><br><br>
+		<input type="button" value="点亮灯泡" onclick="turnOn()">
+		<input type="button" value="熄灭灯泡" onclick="turnOff()">
+	</body>
+</html>
