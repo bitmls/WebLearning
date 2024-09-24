@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script>
+			// 1.出现提示框
+			//window.alert("这是一个消息框");
+			//var flag = window.confirm("这是一个确认框");
+			//document.write(flag);
+			//var num = window.prompt("1+1=?");
+			//document.write(num + " " + typeof(num));
+			
+			// 2.打开、关闭窗口
+			var w;
+			function openWindow(){
+				w = window.open("index.html");
+			}
+			function closeWindow(){
+				w.close();
+			}
+			
+			// 3.定时器
+			// 一次性定时器
+			/*var timer = window.setTimeout("fun()", "1000");
+			var i = 10;
+			function fun(){
+				document.writeln(i--);
+				timer = window.setTimeout("fun()", "1000");
+				if(i == 0)
+					window.clearTimeout(timer);
+			}*/
+
+			// 循环定时器
+			var timer = window.setInterval("fun()", "1000");
+			var i = 5;
+			function fun(){
+				document.writeln(i--);
+				if(i == 0)
+					window.clearInterval(timer);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="打开一个新窗口" onclick="openWindow()">
+		<input type="button" value="关闭当前窗口" onclick="closeWindow()">
+	</body>
+</html>

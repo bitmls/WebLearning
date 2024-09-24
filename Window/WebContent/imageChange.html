@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script>
+			var timer = window.setInterval("fun()", "1000");
+			var i = 0;
+			function fun(){
+				i++;
+				i %= 3;
+
+				var p = document.getElementById("index");
+				
+				if(i == 0)
+					p.src = "Ground.png";
+				else if(i == 1)
+					p.src = "PackbackUI.png";
+				else if(i == 2)
+					p.src = "Player_Reverse.png";
+			}
+		</script>
+	</head>
+	<body>
+		<img src="Ground.png" id="index">
+	</body>
+</html>
